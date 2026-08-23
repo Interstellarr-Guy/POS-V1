@@ -1,5 +1,7 @@
 package pos.version1.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +41,9 @@ public class ProductService {
 		product.setGroup(group);
 		
 		return productRepository.save(product);
+	}
+	public List<Product> getProducts(){
+		return productRepository.findAll();
 	}
 	
 	
